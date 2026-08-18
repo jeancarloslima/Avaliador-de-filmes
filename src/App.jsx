@@ -6,18 +6,54 @@ function App() {
   const [listIsEnd, setListIsEnd] = useState(false);
 
   const filmsList = [
-    "Interstellar",
-    "Fight Club",
-    "Parasite",
-    "Barbie",
-    "La La Land",
-    "Sinners",
-    "Obsession",
-    "Project Hail Mary",
-    "Whiplash",
-    "The Truman Show",
-    "Pulp Fiction",
-    "Dead Poets Society",
+    {
+      year: "2014",
+      title: "Interstellar"
+    },
+    {
+      year: "1999",
+      title: "Fight Club"
+    },
+    {
+      year: "2019",
+      title: "Parasite"
+    },
+    {
+      year: "2023",
+      title: "Barbie"
+    },
+    {
+      year: "2016",
+      title: "La La Land"
+    },
+    {
+      year: "2025",
+      title: "Sinners"
+    },
+    {
+      year: "2026",
+      title: "Obsession"
+    },
+    {
+      year: "2026",
+      title: "Project Hail Mary"
+    },
+    {
+      year: "2014",
+      title: "Whiplash"
+    },
+    {
+      year: "1998",
+      title: "The Truman Show"
+    },
+    {
+      year: "1994",
+      title: "Pulp Fiction"
+    },
+    {
+      year: "1989",
+      title: "Dead Poets Society"
+    },
   ];
 
   const nextFilm = () => {
@@ -34,13 +70,13 @@ function App() {
     <div className="w-screen h-screen flex items-center justify-center flex-col gap-16 p-4">
       {!listIsEnd ? (
         <>
-          <h2 className="text-2xl font-bold text-center">
+          <h2 className="max-w-xl text-2xl font-bold text-center">
             Para começar em nossa plataforma, avalie esses filmes
           </h2>
-          <RatingCard title={filmsList[currentFilm]} nextFilm={nextFilm} />
+          <RatingCard title={filmsList[currentFilm].title} year={filmsList[currentFilm].year} nextFilm={nextFilm} />
         </>
       ) : (
-        <h1 className="text-2xl font-black text-center">
+        <h1 className="max-w-xl text-2xl font-black text-center">
           Fim da lista. Com essas avaliações poderemos fazer recomendações
           melhores para você. <br />
           Aguarde...
