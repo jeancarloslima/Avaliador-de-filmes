@@ -1,5 +1,6 @@
 import { Button, Heading } from "react-aria-components";
 import StarRating from "../StarRating";
+import ReviewModal from "../ReviewModal";
 
 export default function RatingCard({ title, year, nextFilm }) {
   return (
@@ -7,7 +8,7 @@ export default function RatingCard({ title, year, nextFilm }) {
       <Heading className="font-bold text-xl">{title}</Heading>
       <Heading className="-mt-3 text-sm">{year}</Heading>
       <StarRating />
-      <Button className="w-full h-10 hover:cursor-pointer bg-gray-200 text-black rounded-lg">+ Add Review</Button>
+      <ReviewModal />
       <Button type="submit" className="w-full h-10 mt-4 hover:cursor-pointer bg-red-500 text-white rounded-lg" onClick={() => nextFilm()}>Nunca assisti esse filme</Button>
       <Button type="submit" className="w-full h-10 hover:cursor-pointer bg-green-500 text-white rounded-lg" onClick={() => nextFilm()}>Salvar</Button>
     </div>
