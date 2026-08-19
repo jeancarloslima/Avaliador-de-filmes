@@ -1,5 +1,6 @@
 import { useState } from "react";
 import RatingCard from "./components/RatingCard";
+import { Heading } from "react-aria-components";
 
 function App() {
   const [currentFilm, setCurrentFilm] = useState(0);
@@ -8,51 +9,51 @@ function App() {
   const filmsList = [
     {
       year: "2014",
-      title: "Interstellar"
+      title: "Interstellar",
     },
     {
       year: "1999",
-      title: "Fight Club"
+      title: "Fight Club",
     },
     {
       year: "2019",
-      title: "Parasite"
+      title: "Parasite",
     },
     {
       year: "2023",
-      title: "Barbie"
+      title: "Barbie",
     },
     {
       year: "2016",
-      title: "La La Land"
+      title: "La La Land",
     },
     {
       year: "2025",
-      title: "Sinners"
+      title: "Sinners",
     },
     {
       year: "2026",
-      title: "Obsession"
+      title: "Obsession",
     },
     {
       year: "2026",
-      title: "Project Hail Mary"
+      title: "Project Hail Mary",
     },
     {
       year: "2014",
-      title: "Whiplash"
+      title: "Whiplash",
     },
     {
       year: "1998",
-      title: "The Truman Show"
+      title: "The Truman Show",
     },
     {
       year: "1994",
-      title: "Pulp Fiction"
+      title: "Pulp Fiction",
     },
     {
       year: "1989",
-      title: "Dead Poets Society"
+      title: "Dead Poets Society",
     },
   ];
 
@@ -70,17 +71,21 @@ function App() {
     <div className="w-screen h-screen flex items-center justify-center flex-col gap-16 p-4">
       {!listIsEnd ? (
         <>
-          <h2 className="max-w-xl text-2xl font-bold text-center">
+          <Heading className="max-w-xl text-2xl font-bold text-center">
             Para começar em nossa plataforma, avalie esses filmes
-          </h2>
-          <RatingCard title={filmsList[currentFilm].title} year={filmsList[currentFilm].year} nextFilm={nextFilm} />
+          </Heading>
+          <RatingCard
+            title={filmsList[currentFilm].title}
+            year={filmsList[currentFilm].year}
+            nextFilm={nextFilm}
+          />
         </>
       ) : (
-        <h1 className="max-w-xl text-2xl font-black text-center">
+        <Heading className="max-w-xl text-2xl font-black text-center">
           Fim da lista. Com essas avaliações poderemos fazer recomendações
           melhores para você. <br />
           Aguarde...
-        </h1>
+        </Heading>
       )}
     </div>
   );
