@@ -58,10 +58,6 @@ function App() {
   ];
 
   const nextFilm = (e) => {
-    if (e) {
-      e.preventDefault();
-    }
-
     const next = currentFilm + 1;
 
     if (next < filmsList.length) {
