@@ -1,20 +1,19 @@
 import { useState } from "react";
 import { Radio, RadioGroup } from "react-aria-components";
 
-export default function StarRating() {
-  const [rating, setRating] = useState(0);
+export default function StarRating({ value, onChange }) {
   const [hoverValue, setHoverValue] = useState(0);
 
   return (
     <RadioGroup
-      value={rating.toString()}
-      onChange={(val) => setRating(Number(val))}
+      value={value.toString()}
+      onChange={(val) => onChange(Number(val))}
     >
       <div className="flex gap-1">
         {[1, 2, 3, 4, 5].map((startValue) => {
           const isFilled = hoverValue
             ? startValue <= hoverValue
-            : startValue <= rating;
+            : startValue <= value;
 
           return (
             <Radio

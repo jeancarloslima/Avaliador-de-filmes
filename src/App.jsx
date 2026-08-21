@@ -57,7 +57,11 @@ function App() {
     },
   ];
 
-  const nextFilm = () => {
+  const nextFilm = (e) => {
+    if (e) {
+      e.preventDefault();
+    }
+
     const next = currentFilm + 1;
 
     if (next < filmsList.length) {
@@ -75,6 +79,7 @@ function App() {
             Para começar em nossa plataforma, avalie esses filmes
           </Heading>
           <RatingCard
+            key={filmsList[currentFilm].title}
             title={filmsList[currentFilm].title}
             year={filmsList[currentFilm].year}
             nextFilm={nextFilm}
