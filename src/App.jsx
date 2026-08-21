@@ -68,7 +68,7 @@ function App() {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center flex-col gap-16 p-4">
+    <div className="w-screen h-screen flex items-center justify-center flex-col gap-16 p-4 bg-gray-300">
       {!listIsEnd ? (
         <>
           <Heading className="max-w-xl text-2xl font-bold text-center">
