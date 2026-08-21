@@ -71,9 +71,9 @@ function App() {
     <div className="w-screen h-screen flex items-center justify-center flex-col gap-16 p-4 bg-gray-300">
       {!listIsEnd ? (
         <>
-          <Heading className="max-w-xl text-2xl font-bold text-center">
+          <h2 className="max-w-xl text-2xl font-bold text-center">
             Para começar em nossa plataforma, avalie esses filmes
-          </Heading>
+          </h2>
           <RatingCard
             key={filmsList[currentFilm].title}
             title={filmsList[currentFilm].title}
@@ -82,11 +82,11 @@ function App() {
           />
         </>
       ) : (
-        <Heading className="max-w-xl text-2xl font-black text-center">
+        <h2 className="max-w-xl text-2xl font-black text-center">
           Fim da lista. Com essas avaliações poderemos fazer recomendações
           melhores para você. <br />
           Aguarde...
-        </Heading>
+        </h2>
       )}
     </div>
   );

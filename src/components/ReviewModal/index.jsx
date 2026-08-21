@@ -18,7 +18,7 @@ export default function ReviewModal() {
 
       <Modal>
         <Dialog className="outline-none border-transparent p-6 relative">
-          <Heading slot="title" className="mb-2">Escreva sua review</Heading>
+          <Heading level={2} slot="title" className="mb-2">Escreva sua review</Heading>
           <Form className="flex flex-col gap-4">
             <TextField autoFocus className="flex flex-col gap-1">
               <TextArea

@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Radio, RadioGroup } from "react-aria-components";
+import { Label, Radio, RadioGroup } from "react-aria-components";
 
 export default function StarRating({ value, onChange }) {
   const [hoverValue, setHoverValue] = useState(0);
 
   return (
     <RadioGroup
+      aria-label="Qual sua nota para o filme?"
       value={value.toString()}
       onChange={(val) => onChange(Number(val))}
     >
@@ -19,6 +20,7 @@ export default function StarRating({ value, onChange }) {
             <Radio
               key={startValue}
               value={startValue.toString()}
+              aria-label={`${startValue} ${startValue === 1 ? "estrela" : "estrelas"}`}
               onHoverStart={() => setHoverValue(startValue)}
               onHoverEnd={() => setHoverValue(0)}
               className="group cursor-pointer"
