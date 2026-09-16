@@ -6,7 +6,7 @@ Um projeto React de avaliação de filmes para um recomendador de filmes. Onde o
 
 ## 💻 Sobre o Projeto
 
-O projeto consolida o uso de navegação por rotas no React e estilização avançada com utilitários CSS. Através desta aplicação, é possível navegar por diferentes recomendações e detalhes cinematográficos com uma interface moderna. Foco na aplicação do React Router e Tailwind.
+Este projeto foi construído para ser uma ferramenta dinâmica de registo de resenhas e notas, inspirado na dinâmica de plataformas como o Letterboxd, com foco em componentes acessíveis do React Aria Components.
 
 ## ✨ Funcionalidades
 
